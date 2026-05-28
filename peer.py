@@ -3,6 +3,7 @@ import threading
 import os
 import sys
 import time
+import random
 
 from config import *
 import protocolo
@@ -154,24 +155,34 @@ def baixar_arquivo():
     while True:
         with lock:
             concluido = len(meus_blocos) >= total_blocos
+
         if concluido:
             break
 
-        for indice in range(total_blocos):
+        # Escolhe ordem aleatória dos blocos
+        indices_faltantes = list(range(total_blocos))
+        random.shuffle(indices_faltantes)
+
+        for indice in indices_faltantes:
+
             with lock:
                 ja_tem = indice in meus_blocos
+
             if ja_tem:
                 continue
 
             for vizinho in MEUS_VIZINHOS:
                 porta = PEERS[vizinho]
+
                 dados = solicitar_bloco(porta, indice)
+
                 if dados is not None:
                     with lock:
                         meus_blocos[indice] = dados
+
                     print(f"[Peer {peer_id}] Baixou bloco {indice}/{total_blocos-1} do Peer {vizinho}")
                     salvar_log(peer_id, f"Recebeu bloco {indice} do peer {vizinho}")
-                    break 
+                    break
 
         time.sleep(0.05)
 
