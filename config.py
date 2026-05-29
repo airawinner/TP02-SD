@@ -17,4 +17,4 @@ VIZINHOS = {
 }
 
 # Modifique este valor para 4096 no Teste de Fragmentação
-TAMANHO_BLOCO = 1024
+TAMANHO_BLOCO = 4096

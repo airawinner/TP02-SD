@@ -55,6 +55,7 @@ def montar_arquivo():
     else:
         print(f"[Peer {peer_id}] -> INTEGRIDADE CORROMPIDA: ERRO ")
         salvar_log(peer_id, "ERRO DE INTEGRIDADE")
+    
 
 def tratar_cliente(conn, addr):
     global metadata
