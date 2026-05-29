@@ -1,6 +1,7 @@
 # Transferência de Arquivos Peer-to-Peer
 
 Trabalho Prático 2 — Sistemas Distribuídos (CEFET-MG)
+Nomes: Aira Winner e Arthur Secundino
 
 ## Pré-requisitos
 
