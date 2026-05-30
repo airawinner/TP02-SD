@@ -13,6 +13,26 @@ df = pd.read_csv(
 )
 
 # =====================================
+# ORDENA RESULTADOS
+# =====================================
+
+df = df.sort_values(
+    by=[
+        "teste",
+        "arquivo",
+        "bloco",
+        "peers"
+    ]
+)
+
+# =====================================
+# AJUSTE DE FORMATAÇÃO
+# =====================================
+
+df["tempo_s"] = df["tempo_s"].round(3)
+df["throughput_Bps"] = df["throughput_Bps"].round(2)
+
+# =====================================
 # CRIA PASTA DE SAÍDA
 # =====================================
 
@@ -22,7 +42,7 @@ os.makedirs("tabelas", exist_ok=True)
 # CONFIGURAÇÕES
 # =====================================
 
-LINHAS_POR_TABELA = 8
+LINHAS_POR_TABELA = 12
 
 total_tabelas = math.ceil(
     len(df) / LINHAS_POR_TABELA
@@ -40,7 +60,7 @@ for i in range(total_tabelas):
     parte = df.iloc[inicio:fim]
 
     fig, ax = plt.subplots(
-        figsize=(22, 4.5)
+        figsize=(22, 5.5)
     )
 
     ax.axis("off")
@@ -60,12 +80,12 @@ for i in range(total_tabelas):
     tabela.set_fontsize(8)
 
     tabela.scale(
-        1.25,
+        1.2,
         2
     )
 
     # =====================================
-    # CABEÇALHO ROSA
+    # CABEÇALHO
     # =====================================
 
     for coluna in range(len(parte.columns)):
@@ -85,7 +105,11 @@ for i in range(total_tabelas):
 
     for linha in range(1, len(parte) + 1):
 
-        cor = "#FCE4EC" if linha % 2 == 0 else "white"
+        cor = (
+            "#FCE4EC"
+            if linha % 2 == 0
+            else "white"
+        )
 
         for coluna in range(len(parte.columns)):
 

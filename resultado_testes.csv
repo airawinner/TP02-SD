@@ -1,25 +1,29 @@
 teste;configuracao_vizinhos;arquivo;tamanho_bytes;bloco;peers;tempo_s;mensagens;throughput_Bps
-Teste 3 - Validar transferência rápida de poucos blocos;Estática;10KB;10240;1024;2;4.023;23;2545.5
-Teste 3 - Validar transferência rápida de poucos blocos;Estática;10KB;10240;1024;4;5.026;66;2037.54
-Teste 3 - Validar transferência rápida de poucos blocos;Estática;20KB;20480;1024;2;4.009;43;5108.14
-Teste 3 - Validar transferência rápida de poucos blocos;Estática;20KB;20480;1024;4;6.014;127;3405.38
-Teste 4 - Validar fragmentação em número razoável de blocos;Estática;1MB;1048576;1024;2;10.022;2049;104622.39
-Teste 4 - Validar fragmentação em número razoável de blocos;Estática;1MB;1048576;1024;4;18.029;6141;58159.96
-Teste 4 - Validar fragmentação em número razoável de blocos;Estática;5MB;5242880;1024;2;48.076;10243;109053.57
-Teste 4 - Validar fragmentação em número razoável de blocos;Estática;5MB;5242880;1024;4;113.124;30626;46346.5
-Teste 5 - Testar estabilidade para grandes transferências;Estática;10MB;10485760;1024;2;95.254;20483;110082.44
-Teste 5 - Testar estabilidade para grandes transferências;Estática;10MB;10485760;1024;4;224.258;61267;46757.5
-Teste 1 - Testar o impacto dos peers;Estática;20MB;20971520;1024;2;227.199;40962;92304.76
-Teste 1 - Testar o impacto dos peers;Estática;20MB;20971520;1024;4;456.381;122567;45951.74
-Teste 3 - Validar transferência rápida de poucos blocos;Estática;10KB;10240;4096;2;4.01;9;2553.8
-Teste 3 - Validar transferência rápida de poucos blocos;Estática;10KB;10240;4096;4;4.017;25;2549.04
-Teste 3 - Validar transferência rápida de poucos blocos;Estática;20KB;20480;4096;2;4.009;13;5107.94
-Teste 3 - Validar transferência rápida de poucos blocos;Estática;20KB;20480;4096;4;5.018;36;4081.6
-Teste 4 - Validar fragmentação em número razoável de blocos;Estática;1MB;1048576;4096;2;7.01;515;149591.14
-Teste 4 - Validar fragmentação em número razoável de blocos;Estática;1MB;1048576;4096;4;8.045;1536;130332.79
-Teste 4 - Validar fragmentação em número razoável de blocos;Estática;5MB;5242880;4096;2;21.022;2563;249405.2
-Teste 4 - Validar fragmentação em número razoável de blocos;Estática;5MB;5242880;4096;4;25.03;7674;209466.75
-Teste 5 - Testar estabilidade para grandes transferências;Estática;10MB;10485760;4096;2;39.036;5123;268616.0
-Teste 5 - Testar estabilidade para grandes transferências;Estática;10MB;10485760;4096;4;42.062;15343;249292.04
-Teste 5 - Testar estabilidade para grandes transferências;Estática;20MB;20971520;4096;2;70.056;10243;299352.02
-Teste 2 - Testar o impacto da fragmentação;Estática;20MB;20971520;4096;4;109.092;30654;192237.32
+Teste 3 - Validar transferência rápida de poucos blocos;Estática;10KB;10240;1024;2;4.006;23;2556.21
+Teste 3 - Validar transferência rápida de poucos blocos;Estática;10KB;10240;1024;4;6.008;67;1704.49
+Teste 3 - Validar transferência rápida de poucos blocos;Estática;20KB;20480;1024;2;4.006;43;5112.95
+Teste 3 - Validar transferência rápida de poucos blocos;Estática;20KB;20480;1024;4;6.01;127;3407.82
+Teste 4 - Validar fragmentação em número razoável de blocos;Estática;1MB;1048576;1024;2;4.005;2051;261792.08
+Teste 4 - Validar fragmentação em número razoável de blocos;Estática;1MB;1048576;1024;4;6.009;6151;174514.62
+Teste 4 - Validar fragmentação em número razoável de blocos;Estática;5MB;5242880;1024;2;5.007;10243;1047121.12
+Teste 4 - Validar fragmentação em número razoável de blocos;Estática;5MB;5242880;1024;4;7.01;30727;747957.5
+Teste 5 - Testar estabilidade para grandes transferências;Estática;10MB;10485760;1024;2;6.008;20483;1745361.76
+Teste 5 - Testar estabilidade para grandes transferências;Estática;10MB;10485760;1024;4;11.014;61447;952011.63
+Teste 1 - Testar o impacto dos peers;Estática;20MB;20971520;1024;2;9.011;40963;2327427.06
+Teste 5 - Testar estabilidade para grandes transferências;Estática;20MB;20971520;1024;2;9.011;40963;2327427.06
+Teste 1 - Testar o impacto dos peers;Estática;20MB;20971520;1024;4;19.021;122887;1102549.69
+Teste 2 - Testar o impacto da fragmentação;Estática;20MB;20971520;1024;4;19.021;122887;1102549.69
+Teste 5 - Testar estabilidade para grandes transferências;Estática;20MB;20971520;1024;4;19.021;122887;1102549.69
+Teste 3 - Validar transferência rápida de poucos blocos;Estática;10KB;10240;4096;2;4.005;9;2557.12
+Teste 3 - Validar transferência rápida de poucos blocos;Estática;10KB;10240;4096;4;6.009;25;1704.11
+Teste 3 - Validar transferência rápida de poucos blocos;Estática;20KB;20480;4096;2;4.006;13;5112.73
+Teste 3 - Validar transferência rápida de poucos blocos;Estática;20KB;20480;4096;4;5.008;37;4089.19
+Teste 4 - Validar fragmentação em número razoável de blocos;Estática;1MB;1048576;4096;2;4.007;515;261717.71
+Teste 4 - Validar fragmentação em número razoável de blocos;Estática;1MB;1048576;4096;4;6.016;1543;174292.94
+Teste 4 - Validar fragmentação em número razoável de blocos;Estática;5MB;5242880;4096;2;4.008;2563;1308133.4
+Teste 4 - Validar fragmentação em número razoável de blocos;Estática;5MB;5242880;4096;4;6.008;7687;872710.21
+Teste 5 - Testar estabilidade para grandes transferências;Estática;10MB;10485760;4096;2;5.007;5123;2094406.0
+Teste 5 - Testar estabilidade para grandes transferências;Estática;10MB;10485760;4096;4;7.012;15367;1495363.05
+Teste 5 - Testar estabilidade para grandes transferências;Estática;20MB;20971520;4096;2;5.007;10243;4188810.4
+Teste 2 - Testar o impacto da fragmentação;Estática;20MB;20971520;4096;4;8.01;30727;2618084.77
+Teste 5 - Testar estabilidade para grandes transferências;Estática;20MB;20971520;4096;4;8.01;30727;2618084.77

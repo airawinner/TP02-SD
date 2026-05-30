@@ -135,7 +135,7 @@ for bloco in BLOCOS:
 
             processos.append(
                 subprocess.Popen(
-                    ["python", "peer.py", "1", caminho]
+                    ["python3", "peer.py", "1", caminho]
                 )
             )
 
@@ -151,7 +151,7 @@ for bloco in BLOCOS:
 
                 processos.append(
                     subprocess.Popen(
-                        ["python", "peer.py", str(peer), vazio]
+                        ["python3", "peer.py", str(peer), vazio]
                     )
                 )
 
@@ -186,70 +186,84 @@ for bloco in BLOCOS:
             # IDENTIFICAÇÃO DOS TESTES
             # ===========================
 
+            testes = []
+
+            # Teste 1
             if nome_arq == "20MB" and bloco == 1024:
 
-                descricao = (
+                testes.append(
                     "Teste 1 - Testar o impacto dos peers"
                 )
 
-            elif nome_arq == "20MB" and qtd_peers == 4:
+            # Teste 2
+            if nome_arq == "20MB" and qtd_peers == 4:
 
-                descricao = (
+                testes.append(
                     "Teste 2 - Testar o impacto da fragmentação"
                 )
 
-            elif nome_arq in ["10KB", "20KB"]:
+            # Teste 3
+            if nome_arq in ["10KB", "20KB"]:
 
-                descricao = (
+                testes.append(
                     "Teste 3 - Validar transferência rápida de poucos blocos"
                 )
 
-            elif nome_arq in ["1MB", "5MB"]:
+            # Teste 4
+            if nome_arq in ["1MB", "5MB"]:
 
-                descricao = (
+                testes.append(
                     "Teste 4 - Validar fragmentação em número razoável de blocos"
                 )
 
-            elif nome_arq in ["10MB", "20MB"]:
+            # Teste 5
+            if nome_arq in ["10MB", "20MB"]:
 
-                descricao = (
+                testes.append(
                     "Teste 5 - Testar estabilidade para grandes transferências"
                 )
 
-            else:
+            if not testes:
 
-                descricao = (
+                testes.append(
                     "Teste Complementar"
                 )
 
-            RESULTADOS.append({
+            # ===========================
+            # ADICIONA UMA LINHA POR TESTE
+            # ===========================
 
-                "teste": descricao,
+            for teste in testes:
 
-                "configuracao_vizinhos":
-                    "Estática",
+                RESULTADOS.append({
 
-                "arquivo":
-                    nome_arq,
+                    "teste":
+                        teste,
 
-                "tamanho_bytes":
-                    tamanho,
+                    "configuracao_vizinhos":
+                        "Estática",
 
-                "bloco":
-                    bloco,
+                    "arquivo":
+                        nome_arq,
 
-                "peers":
-                    qtd_peers,
+                    "tamanho_bytes":
+                        tamanho,
 
-                "tempo_s":
-                    round(tempo, 3),
+                    "bloco":
+                        bloco,
 
-                "mensagens":
-                    mensagens,
+                    "peers":
+                        qtd_peers,
 
-                "throughput_Bps":
-                    round(throughput, 2)
-            })
+                    "tempo_s":
+                        round(tempo, 3),
+
+                    "mensagens":
+                        mensagens,
+
+                    "throughput_Bps":
+                        round(throughput, 2)
+                })
 
             for proc in processos:
 
